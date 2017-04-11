@@ -41,12 +41,11 @@ public class PedidoDao {
 			// Buscando o próximo valor da sequência e atribuindo ao objeto
 			pedido.setCod(nextCode());
 			
-			String sql ="INSERT INTO pedido (cod, data, cod_cliente) VALUES (?,?,?)";
+			String sql ="INSERT INTO pedido (cod, data) VALUES (?,?)";
 			
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, pedido.getCod());
 			statement.setTimestamp(2, new java.sql.Timestamp(pedido.getData().getTime()));
-			statement.setInt(3, pedido.getCod_cliente());
 			
 			statement.executeUpdate();
 		} catch(SQLException exception){

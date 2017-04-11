@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
-
 import trabalhoBD.dao.ConexaoBD;
 import trabalhoBD.dao.DAOException;
 import trabalhoBD.dao.ItemDao;
@@ -16,9 +15,8 @@ import trabalhoBD.model.Item;
 import trabalhoBD.model.Pedido;
 import trabalhoBD.model.Produto;
 
-public class pedidoBI {
-	
-	public static void createOrder(Cliente client, ArrayList<Item> items) throws pedidoException{
+public class produtoBI {
+	public static void createOrder(ArrayList<Produto> prods) throws pedidoException{ //parei na criação do produto BI
 		try{
 			// Criar a conexão com o banco
 			Connection connection = ConexaoBD.createConnection();

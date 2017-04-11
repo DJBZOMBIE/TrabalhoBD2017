@@ -19,16 +19,16 @@ public class testePedido {
 			//inserindo item 1 do pedido
 			Item item1 = new Item();
 			item1.setCod_produto(1);
-			item1.setQuantidade(3);
+			item1.setQuantidade(0);
 			
 			//insere na classe ItemBI(OrderBI)
 			items.add(item1);
 			
 			// Inserindo o Item 2 do pedido
 			Item item2 = new Item();
-			item2.setCod_produto(2);
-			item2.setQuantidade(1);
-			
+			item2.setCod_produto(3);
+			item2.setQuantidade(0);
+			System.out.println("blz2");
 			items.add(item2);
 			
 			pedidoBI.createOrder(client, items);
